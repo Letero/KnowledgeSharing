@@ -34,7 +34,7 @@ Each variable in C must have:
  Each variable in C must have a value. 
  * Static variables file scope and function scope are automatically initialized to zero.
  * Non-static global variables are initialized to zero.
- * Non-static local variables contains indetermine value.
+ * Non-static local variables contain indetermine value.
  
 
 ```c
