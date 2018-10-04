@@ -26,6 +26,8 @@ Example answer
 
 ## 2. Difference between initial values of unitialized static and non-static variables
 
+Keep in mind that we are talking about **unitialized** variables!
+
 Each variable in C must have:
  *  Name
  *	Type
@@ -34,7 +36,7 @@ Each variable in C must have:
  I repeat: each variable in C must have a value!
  * **Static variables** - both global (file) scope and local (eg. function) scope are automatically initialized with 0.
  * **Non-static global** variables are initialized with 0.
- * **Non-static local** variables are initialized with random value from stack.
+ * **Non-static local** variables are usually initialized with random value from stack.
  
 
 ```c
@@ -44,7 +46,7 @@ int global;               // global non-static variables** are initialized with 
 void foo()
 {
 	static int s_local;   // static local variables are initialized with 0, just like global variables
-	int local;            // non-static local variables will be indetermine, probably 
+	int local;            // non-static local variable's value will be indetermined, but usually it is random value from stack
 	
 	printf("static local: %i\n", s_local);
 	printf("local: %i\n", local);
