@@ -1,11 +1,11 @@
 - [Preparation](#preparation)
 - [C](#c)
   * [1. Example question](#1-example-question)
-  * [2. Variables](#1-variables)
+  * [2. Difference between initial values of unitialized static and non-static variables](#2-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
+  * [3. Does *const volatile* make any sense? IQN](#3-does--const-volatile--make-any-sense--iqn)
 - [CPP](#cpp)
   * [1. Example question](#1-example-question-1)
 - [Base knowledge](#base-knowledge)
-
 
 # Preparation
 
@@ -60,6 +60,16 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
+## 3. Does *const volatile* make any sense? IQN
+
+That is kind of tricky question.
+
+Simply put: yes. *Volatile* keyword itself prevents an optimizing compiler from optimizing away subsequent reads or writes and thus incorrectly reusing a stale value or omitting writes. Thanks to *const* we make sure that programmer won't be able to change it by mistake.
+
+Usually we use *const* specifier to make sure that variable's value won't be changed.
+
+Value of *const volatile* variable might be changed during execution of program, what might make you think that using it doesn't make any sense. In this case we use *const* mainly to prevent programmer from doing unacknowledged mistake, rather than to make sure value won't be changed at all.
+
 
 # CPP
 
