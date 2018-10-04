@@ -8,14 +8,15 @@
 
 ## 1. Example question
 Example answer
-[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/C_code/main.c]
+
+[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/C_code/main.c)
 
 # C++
 
 ## 1. Example question
 Example answer
 
-[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/CPP_code/main.cpp]
+[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/CPP_code/main.cpp)
 
 
 # Base knowledge:
