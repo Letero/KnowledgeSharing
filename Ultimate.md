@@ -39,7 +39,7 @@ Each variable in C must have:
 
 ```c
 static int s_global;      // static file scope will be initialized to 0
-int global;               // global non-static will be indetermine
+int global;               // global non-static will be initialized to 0
  
 void foo()
 {
