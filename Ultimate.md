@@ -16,4 +16,7 @@ Example answer
 Example answer
 
 [Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/CPP_code/main.cpp]
-# #Base knowledge
+
+
+# Base knowledge:
+
