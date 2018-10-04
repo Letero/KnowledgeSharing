@@ -18,33 +18,33 @@
 # C
 
 ## 1. Example question
+
 Example answer
 
 [Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/C_code/main.c)
 
 
-## 2. Variables
-Variables
+## 2. Difference between initial values of unitialized static and non-static variables
 
 Each variable in C must have:
  *  Name
  *	Type
  *	Value
  
- Each variable in C must have a value. 
- * Static variables file scope and function scope are automatically initialized to zero.
- * Non-static global variables are initialized to zero.
- * Non-static local variables contain indetermine value.
+ I repeat: each variable in C must have a value!
+ * **Static variables** - both global (file) scope and local (eg. function) scope are automatically initialized with 0.
+ * **Non-static global** variables are initialized with 0.
+ * **Non-static local** variables are initialized with random value from stack.
  
 
 ```c
-static int s_global;      // static file scope will be initialized to 0
-int global;               // global non-static will be initialized to 0
+static int s_global;      // global static variables are initalized with 0
+int global;               // global non-static variables** are initialized with 0
  
 void foo()
 {
-	static int s_local;   // static local will be initialized to 0
-	int local;            // non-static local will be indetermine
+	static int s_local;   // static local variables are initialized with 0, just like global variables
+	int local;            // non-static local variables will be indetermine, probably 
 	
 	printf("static local: %i\n", s_local);
 	printf("local: %i\n", local);
