@@ -2,6 +2,7 @@
 - [C](#c)
   * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
   * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
+  * [3. Restrict keyword - what is it used for?](#3-eestrict--keyword---what-is-it-used-for?)
 - [CPP](#cpp)
 - [Base knowledge](#base-knowledge)
   * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
@@ -70,6 +71,14 @@ Usually we use *const* specifier to make sure that variable's value won't be cha
 
 Value of *const volatile* variable might be changed during execution of program, what might make you think that using it doesn't make any sense. In this case we use *const* mainly to prevent programmer from doing unacknowledged mistake, rather than to make sure value won't be changed at all.
 
+## 3. Restrict keyword - what is it used for?
+
+Restrict keyword is used in pointer declaration. It tells that this pointer is the only way to access object that it's pointing to.
+It does not add new functionality
+Compiler won't prevent programmer from creating another pointer to restricted address. It is promise made by programmer.
+Not following to restrict contract results in undefined behavior.
+Restrict keyword is used so compiler can make optimizations.
+It was defined in C99 standard
 
 # CPP
 
