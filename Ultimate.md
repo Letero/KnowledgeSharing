@@ -1,11 +1,16 @@
 - [Preparation](#preparation)
 - [C](#c)
-  * [1. Example question](#1-example-question)
-  * [2. Difference between initial values of unitialized static and non-static variables](#2-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
-  * [3. Does *const volatile* make any sense? IQN](#3-does--const-volatile--make-any-sense--iqn)
+  * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
+  * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
 - [CPP](#cpp)
-  * [1. Example question](#1-example-question-1)
 - [Base knowledge](#base-knowledge)
+  * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
+  * [2. Stack](#2-stack)
+  * [3. Heap](#3-heap)
+  * [4.](#4)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Preparation
 
@@ -17,16 +22,11 @@
 
 # C
 
-## 1. Example question
 
-Example answer
-
-[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/C_code/main.c)
-
-
-## 2. Difference between initial values of unitialized static and non-static variables
+## 1. Difference between initial values of unitialized static and non-static variables
 
 Keep in mind that we are talking about **unitialized** variables!
+Checkout out [Memory layout](#1-memory-layout-of-c-programs--iqn), you will be able to understand why it works this way.
 
 Each variable in C must have:
  *  Name
@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
-## 3. Does *const volatile* make any sense? IQN
+## 2. Does *const volatile* make any sense? IQN
 
 That is kind of tricky question.
 
@@ -73,11 +73,15 @@ Value of *const volatile* variable might be changed during execution of program,
 
 # CPP
 
-## 1. Example question
-Example answer
-
-[Link to example code](https://github.com/Letero/KnowledgeSharing/blob/master/Examples/CPP_code/main.cpp)
-
 # Base knowledge
 
+## 1. Memory layout of C programs /IQN
 
+
+
+
+## 2. Stack
+
+## 3. Heap
+
+## 4. 
