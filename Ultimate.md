@@ -9,6 +9,7 @@
   * [2. Stack](#2-stack)
   * [3. Heap](#3-heap)
   * [4.](#4)
+  * [5.  Copy elision](#5-copy-elision)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -94,3 +95,50 @@ It was defined in C99 standard
 ## 3. Heap
 
 ## 4. 
+
+## 5. Copy elision
+	Copy elision is compiler optimization technique in c++ programming. It ommits unnecessary copy of object. Copy can be elided even if it contains crucial logic. 
+	To disable copy elision you should compile the program using flag: "-fno-elide-constructors"
+	
+	```cpp
+	#include <iostream>
+
+	class Base
+	{
+		public:
+			Base()
+			{
+				value = 0;
+				std::cout << "Default constructor" << std::endl;
+			}
+			
+			Base(const Base& base)
+			{
+				value = base.value;
+				++value;
+				std::cout << "Copy constructor" << std::endl;
+			}
+			
+			void printValue()
+			{
+				std::cout << "Value: " << value << std::endl;
+			}
+			
+		private:
+			int value;
+	};
+
+	Base func()
+	{
+		Base b;
+		return b;
+	}
+
+	int main()
+	{
+		Base b = func();
+		b.printValue();
+		return 0;
+	}
+	```
+	![Output](../images/ce.png)
