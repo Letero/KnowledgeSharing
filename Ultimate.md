@@ -94,7 +94,6 @@ It was defined in C99 standard
 
 ## 3. Heap
 
-## 4. 
 
 ## 5. Copy elision
 	Copy elision is compiler optimization technique in c++ programming. It ommits unnecessary copy of object. Copy can be elided even if it contains crucial logic. 
