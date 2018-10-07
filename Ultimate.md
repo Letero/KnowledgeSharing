@@ -100,7 +100,7 @@ It was defined in C99 standard
 	Copy elision is compiler optimization technique in c++ programming. It ommits unnecessary copy of object. Copy can be elided even if it contains crucial logic. 
 	To disable copy elision you should compile the program using flag: "-fno-elide-constructors"
 	
-	```cpp
+	```c
 	#include <iostream>
 
 	class Base
@@ -141,4 +141,5 @@ It was defined in C99 standard
 		return 0;
 	}
 	```
-	![Output](../images/ce.png)
+	
+	![Output](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
