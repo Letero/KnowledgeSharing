@@ -1,17 +1,4 @@
-- [Preparation](#preparation)
-- [C](#c)
-  * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
-  * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
-  * [3. Restrict keyword - what is it used for?](#3-eestrict--keyword---what-is-it-used-for?)
-- [CPP](#cpp)
-- [Base knowledge](#base-knowledge)
-  * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
-  * [2. Stack](#2-stack)
-  * [3. Heap](#3-heap)
-  * [4.](#4)
-  * [5.  Copy elision](#5-copy-elision)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 # Preparation
@@ -83,6 +70,54 @@ It was defined in C99 standard
 
 # CPP
 
+## 1. Copy elision
+
+Copy elision is compiler optimization technique in c++ programming. It ommits unnecessary copy of object. Copy can be elided even if it contains crucial logic. 
+To disable copy elision you should compile the program using flag: "-fno-elide-constructors"
+	
+```c
+#include <iostream>
+
+class Base
+{
+public:
+	Base()
+	{
+		value = 0;
+		std::cout << "Default constructor" << std::endl;
+        }
+	Base(const Base& base)
+	{
+		value = base.value;
+		++value;
+		std::cout << "Copy constructor" << std::endl;
+	}
+		
+	void printValue()
+	{
+		std::cout << "Value: " << value << std::endl;
+	}
+			
+private:
+	int value;
+};
+
+Base func()
+{
+        Base b;
+	return b;
+}
+
+int main()
+{
+	Base b = func();
+	b.printValue();
+	return 0;
+}
+```
+	
+	![Output](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
+
 # Base knowledge
 
 ## 1. Memory layout of C programs /IQN
@@ -93,53 +128,3 @@ It was defined in C99 standard
 ## 2. Stack
 
 ## 3. Heap
-
-
-## 5. Copy elision
-
-	Copy elision is compiler optimization technique in c++ programming. It ommits unnecessary copy of object. Copy can be elided even if it contains crucial logic. 
-	To disable copy elision you should compile the program using flag: "-fno-elide-constructors"
-	
-	```cpp
-	#include <iostream>
-
-	class Base
-	{
-		public:
-			Base()
-			{
-				value = 0;
-				std::cout << "Default constructor" << std::endl;
-			}
-			
-			Base(const Base& base)
-			{
-				value = base.value;
-				++value;
-				std::cout << "Copy constructor" << std::endl;
-			}
-			
-			void printValue()
-			{
-				std::cout << "Value: " << value << std::endl;
-			}
-			
-		private:
-			int value;
-	};
-
-	Base func()
-	{
-		Base b;
-		return b;
-	}
-
-	int main()
-	{
-		Base b = func();
-		b.printValue();
-		return 0;
-	}
-	```
-	
-	![Output](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
