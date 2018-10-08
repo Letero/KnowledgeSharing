@@ -139,3 +139,5 @@ For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 
 I will elaborate on this once I'm done with binary operations.
+
+	   THANK YOU JAROSŁAW!
