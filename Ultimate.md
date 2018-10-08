@@ -135,9 +135,7 @@ int main()
 
 ## 1. Memory layout of C programs /IQN
 
+For now use this source, decent explanation
+[Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 
-
-
-## 2. Stack
-
-## 3. Heap
+I will elaborate on this once I'm done with binary operations.
