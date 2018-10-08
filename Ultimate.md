@@ -129,7 +129,7 @@ int main()
 }
 ```
 	
-	![Output](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
+![Output ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
 
 # Base knowledge
 
