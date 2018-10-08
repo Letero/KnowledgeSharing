@@ -1,3 +1,16 @@
+- [Preparation](#preparation)
+- [C](#c)
+  * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
+  * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
+  * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
+- [CPP](#cpp)
+  * [1. Copy elision](#1-copy-elision)
+- [Base knowledge](#base-knowledge)
+  * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
+  * [2. Stack](#2-stack)
+  * [3. Heap](#3-heap)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
