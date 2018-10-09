@@ -132,7 +132,7 @@ int main()
 	
 ![Output ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
 
-This topic is not finished yet
+This topic is not finished yet.
 
 
 ##2. Virtual Destructor
