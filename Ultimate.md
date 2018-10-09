@@ -132,12 +132,10 @@ int main()
 	
 ![Output ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
 
-
 This topic is not finished yet
 
 
 ##2. Virtual Destructor
-
 
 If base class does not have virtual destructor and we delete derived class instance through base type pointer the **behaviour is undefined**. Most compiler implementations will call base destructor.
 If class has even one virtual method, then it should have virtual destructor.
