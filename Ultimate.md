@@ -5,6 +5,7 @@
   * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
+  * [2. Virtual destructor](#2-virtual-destructor)
 - [Base knowledge](#base-knowledge)
   * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
   * [2. Stack](#2-stack)
@@ -131,6 +132,10 @@ int main()
 	
 ![Output ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/ce.png)
 
+
+This topic is not finished yet
+
+
 # Base knowledge
 
 ## 1. Memory layout of C programs /IQN
@@ -141,3 +146,14 @@ For now use this source, decent explanation
 I will elaborate on this once I'm done with binary operations.
 
 	   THANK YOU JAROSŁAW!
+	   
+	   
+	   
+##2. Virtual Destructor
+
+If base class does not have virtual destructor and we delete derived class instance through base type pointer the **behaviour is undefined**. Most compiler implementations will call base destructor.
+If class has even one virtual method, then it should have virtual destructor.
+
+
+![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
+
