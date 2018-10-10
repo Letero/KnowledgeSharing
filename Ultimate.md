@@ -5,13 +5,11 @@
   * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
-  * [2. Virtual destructor](#2-virtual-destructor)
 - [Base knowledge](#base-knowledge)
   * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
-  * [2. Stack](#2-stack)
-  * [3. Heap](#3-heap)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -153,6 +151,6 @@ For now use this source, decent explanation
 
 I will elaborate on this once I'm done with binary operations.
 
-	   THANK YOU JAROSŁAW!
+	   THANK YOU JAROSŁAW! NP! We can also link to other sources in order to answer given question, no point of reinventing the wheel sometimes!
 	   
 
