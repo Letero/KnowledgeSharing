@@ -5,6 +5,9 @@
   * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
+  * [2. Virtual Destructor](#2-virtual-destructor)
+  * [3. When will copy constructor be called? IQN](#3-when-will-copy-constructor-be-called--iqn)
+  * [4. When will deconstructor be called? IQN](#4-when-will-deconstructor-be-called--iqn)
 - [Base knowledge](#base-knowledge)
   * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
 
@@ -132,7 +135,7 @@ int main()
 This topic is not finished yet.
 
 
-##2. Virtual Destructor
+## 2. Virtual Destructor
 
 If base class does not have virtual destructor and we delete derived class instance through base type pointer the **behaviour is undefined**. Most compiler implementations will call base destructor.
 If class has even one virtual method, then it should have virtual destructor.
@@ -140,12 +143,12 @@ If class has even one virtual method, then it should have virtual destructor.
 
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
-##3. When will copy constructor be called? IQN
+## 3. When will copy constructor be called? IQN
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/21206359/in-which-situations-is-the-c-copy-constructor-called)
 
-##4. When will deconstructor be called? IQN
+## 4. When will deconstructor be called? IQN
 
 TODO!
 [Link for now(https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
