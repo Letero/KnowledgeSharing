@@ -151,7 +151,7 @@ TODO!
 ## 4. When will deconstructor be called? IQN
 
 TODO!
-[Link for now(https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
+[Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
 
 # Base knowledge
@@ -162,5 +162,9 @@ For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 
 I will elaborate on this once I'm done with binary operations.
-	   
+
+## 2. GCC compilation process
+
+TODO!
+[Link for now](https://www.youtube.com/watch?v=wDKeJ79TBsg)
 
