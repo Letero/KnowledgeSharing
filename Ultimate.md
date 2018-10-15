@@ -12,7 +12,6 @@
 
 
 
-
 # Preparation
 
 **[How to format this file](https://guides.github.com/features/mastering-markdown)**
@@ -141,6 +140,16 @@ If class has even one virtual method, then it should have virtual destructor.
 
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
+##3. When will copy constructor be called? IQN
+
+TODO!
+[Link for now](https://stackoverflow.com/questions/21206359/in-which-situations-is-the-c-copy-constructor-called)
+
+##4. When will deconstructor be called? IQN
+
+TODO!
+[Link for now(https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
+
 
 # Base knowledge
 
@@ -150,7 +159,5 @@ For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 
 I will elaborate on this once I'm done with binary operations.
-
-	   THANK YOU JAROSŁAW! NP! We can also link to other sources in order to answer given question, no point of reinventing the wheel sometimes!
 	   
 
