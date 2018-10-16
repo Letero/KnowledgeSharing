@@ -207,3 +207,7 @@ TODO!
 
 TODO!
 [Link for now](https://github.com/Letero/Small-tasks/blob/master/BitwiseOperations/BitwiseOperations.c)
+
+## 6. Endianness
+
+[Link](https://www.geeksforgeeks.org/little-and-big-endian-mystery/)
