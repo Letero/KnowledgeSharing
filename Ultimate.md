@@ -163,8 +163,20 @@ For now use this source, decent explanation
 
 I will elaborate on this once I'm done with binary operations.
 
-## 2. GCC compilation process
+## 2. Compilation process C/CPP
+
+Probable IQN:
 
 TODO!
 [Link for now](https://www.youtube.com/watch?v=wDKeJ79TBsg)
+
+## 3. Preprocessor directives IQN
+
+TODO!
+[Link for now](http://www.cplusplus.com/doc/tutorial/preprocessor/)
+
+## 4. Translation unit
+
+TODO!
+[Link for now](https://stackoverflow.com/questions/8342185/translation-unit-in-c-and-c)
 
