@@ -3,13 +3,19 @@
   * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
   * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
   * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
+  * [4. Void* pointer in C! IQN](#4-void--pointer-in-c--iqn)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
   * [2. Virtual Destructor](#2-virtual-destructor)
   * [3. When will copy constructor be called? IQN](#3-when-will-copy-constructor-be-called--iqn)
   * [4. When will deconstructor be called? IQN](#4-when-will-deconstructor-be-called--iqn)
+  * [5. Differences: free vs delete   IQN](#5-differences--free-vs-delete---iqn)
+  * [6. Differences: malloc vs new    IQN](#6-differences--malloc-vs-new----iqn)
 - [Base knowledge](#base-knowledge)
-  * [1. Memory layout of C programs /IQN](#1-memory-layout-of-c-programs--iqn)
+  * [1. Memory layout of C/CPP programs /IQN](#1-memory-layout-of-c-cpp-programs--iqn)
+  * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
+  * [3. Preprocessor directives IQN](#3-preprocessor-directives-iqn)
+  * [4. Translation unit  IQN](#4-translation-unit--iqn)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -82,6 +88,11 @@ Not following to restrict contract results in undefined behavior.
 Restrict keyword is used so compiler can make optimizations.
 It was defined in C99 standard
 
+## 4. Void* pointer in C! IQN
+
+TODO!
+[Link for now](https://bytes.com/topic/c/answers/872557-what-use-void-pointer)
+
 # CPP
 
 ## 1. Copy elision
@@ -153,10 +164,19 @@ TODO!
 TODO!
 [Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
+## 5. Differences: free vs delete	IQN 
+
+TODO!
+[Link for now](https://stackoverflow.com/questions/328834/c-delete-vs-free-and-performance)
+
+## 6. Differences: malloc vs new	IQN
+
+TODO!
+[Link for now](https://www.geeksforgeeks.org/malloc-vs-new/)
 
 # Base knowledge
 
-## 1. Memory layout of C programs /IQN
+## 1. Memory layout of C/CPP programs /IQN
 
 For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
@@ -164,8 +184,6 @@ For now use this source, decent explanation
 I will elaborate on this once I'm done with binary operations.
 
 ## 2. Compilation process C/CPP
-
-Probable IQN:
 
 TODO!
 [Link for now](https://www.youtube.com/watch?v=wDKeJ79TBsg)
@@ -175,7 +193,7 @@ TODO!
 TODO!
 [Link for now](http://www.cplusplus.com/doc/tutorial/preprocessor/)
 
-## 4. Translation unit
+## 4. Translation unit	IQN
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/8342185/translation-unit-in-c-and-c)
