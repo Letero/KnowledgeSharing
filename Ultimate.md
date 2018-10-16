@@ -1,23 +1,25 @@
 - [Preparation](#preparation)
 - [C](#c)
   * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
-  * [2. Does *const volatile* make any sense? IQN](#2-does--const-volatile--make-any-sense--iqn)
+  * [2. [IQN]Does *const volatile* make any sense?](#2--iqn-does--const-volatile--make-any-sense-)
   * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
-  * [4. Void* pointer in C! IQN](#4-void--pointer-in-c--iqn)
+  * [4. [IQN]Void* pointer in C](#4--iqn-void--pointer-in-c)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
   * [2. Virtual Destructor](#2-virtual-destructor)
-  * [3. When will copy constructor be called? IQN](#3-when-will-copy-constructor-be-called--iqn)
-  * [4. When will deconstructor be called? IQN](#4-when-will-deconstructor-be-called--iqn)
-  * [5. Differences: free vs delete   IQN](#5-differences--free-vs-delete---iqn)
-  * [6. Differences: malloc vs new    IQN](#6-differences--malloc-vs-new----iqn)
+  * [3. [IQN]When will copy constructor be called?](#3--iqn-when-will-copy-constructor-be-called-)
+  * [4. [IQN]When will deconstructor be called?](#4--iqn-when-will-deconstructor-be-called-)
+  * [5. [IQN]Differences: free vs delete](#5--iqn-differences--free-vs-delete)
+  * [6. [IQN]Differences: malloc vs new](#6--iqn-differences--malloc-vs-new)
 - [Base knowledge](#base-knowledge)
-  * [1. Memory layout of C/CPP programs /IQN](#1-memory-layout-of-c-cpp-programs--iqn)
+  * [1. [IQN]Memory layout of C/CPP programs](#1--iqn-memory-layout-of-c-cpp-programs)
   * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
-  * [3. Preprocessor directives IQN](#3-preprocessor-directives-iqn)
-  * [4. Translation unit  IQN](#4-translation-unit--iqn)
+  * [3. Preprocessor directives](#3-preprocessor-directives)
+  * [4. [IQN]Translation unit](#4--iqn-translation-unit)
+  * [5. [IQN]Binary operations](#5--iqn-binary-operations)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -69,7 +71,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
-## 2. Does *const volatile* make any sense? IQN
+## 2. [IQN]Does *const volatile* make any sense?
 
 That is kind of tricky question.
 
@@ -88,7 +90,7 @@ Not following to restrict contract results in undefined behavior.
 Restrict keyword is used so compiler can make optimizations.
 It was defined in C99 standard
 
-## 4. Void* pointer in C! IQN
+## 4. [IQN]Void* pointer in C
 
 TODO!
 [Link for now](https://bytes.com/topic/c/answers/872557-what-use-void-pointer)
@@ -155,31 +157,31 @@ If class has even one virtual method, then it should have virtual destructor.
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
 
-## 3. When will copy constructor be called? IQN
+## 3. [IQN]When will copy constructor be called?
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/21206359/in-which-situations-is-the-c-copy-constructor-called)
 
-## 4. When will deconstructor be called? IQN
+## 4. [IQN]When will deconstructor be called? 
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
 
-## 5. Differences: free vs delete	IQN 
+## 5. [IQN]Differences: free vs delete
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/328834/c-delete-vs-free-and-performance)
 
 
-## 6. Differences: malloc vs new	IQN
+## 6. [IQN]Differences: malloc vs new
 
 TODO!
 [Link for now](https://www.geeksforgeeks.org/malloc-vs-new/)
 
 # Base knowledge
 
-## 1. Memory layout of C/CPP programs /IQN
+## 1. [IQN]Memory layout of C/CPP programs
 
 For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
@@ -191,13 +193,17 @@ I will elaborate on this once I'm done with binary operations.
 TODO!
 [Link for now](https://www.youtube.com/watch?v=wDKeJ79TBsg)
 
-## 3. Preprocessor directives IQN
+## 3. Preprocessor directives
 
 TODO!
 [Link for now](http://www.cplusplus.com/doc/tutorial/preprocessor/)
 
-## 4. Translation unit	IQN
+## 4. [IQN]Translation unit
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/8342185/translation-unit-in-c-and-c)
 
+## 5. [IQN]Binary operations
+
+TODO!
+[Link for now](https://github.com/Letero/Small-tasks/blob/master/BitwiseOperations/BitwiseOperations.c)
