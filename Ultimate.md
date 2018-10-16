@@ -154,6 +154,7 @@ If class has even one virtual method, then it should have virtual destructor.
 
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
+
 ## 3. When will copy constructor be called? IQN
 
 TODO!
@@ -164,10 +165,12 @@ TODO!
 TODO!
 [Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
+
 ## 5. Differences: free vs delete	IQN 
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/328834/c-delete-vs-free-and-performance)
+
 
 ## 6. Differences: malloc vs new	IQN
 
