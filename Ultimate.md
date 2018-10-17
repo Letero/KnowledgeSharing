@@ -17,8 +17,11 @@
   * [3. Preprocessor directives](#3-preprocessor-directives)
   * [4. (IQN)Translation unit](#4--iqn-translation-unit)
   * [5. (IQN)Binary operations](#5--iqn-binary-operations)
+  * [6. Endianness](#6-endianness)
+  * [7. (IQN)Memory allocation for 2D and 3D array/vector](#7--iqn-memory-allocation-for-2d-and-3d-array-vector)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
