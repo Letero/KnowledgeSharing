@@ -211,3 +211,8 @@ TODO!
 ## 6. Endianness
 
 [Link](https://www.geeksforgeeks.org/little-and-big-endian-mystery/)
+
+## 7. (IQN)Memory allocation for 2D and 3D array/vector
+
+TODO!
+[Link to example](https://github.com/Letero/Small-tasks/tree/master/Allocation)
