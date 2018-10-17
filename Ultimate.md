@@ -233,5 +233,29 @@ TODO!
 
 ## 2. Odd array indexing
 
-[Link](https://stackoverflow.com/questions/381542/with-arrays-why-is-it-the-case-that-a5-5a)
+Look at this code: 
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int *arr = (malloc(sizeof(int) * 3));
+  2[arr] = 55;
+  printf("%d %d\n", arr[2], 2[arr]);
+  
+  free(arr);
+  return 0;
+}
+```
+Output:
+```c
+Success	#stdin #stdout 0s 9424KB
+55
+55
+```
+
+Why does it work this way?
+[Link to the answer](https://stackoverflow.com/questions/381542/with-arrays-why-is-it-the-case-that-a5-5a)
 
