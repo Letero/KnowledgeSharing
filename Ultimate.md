@@ -219,3 +219,19 @@ TODO!
 
 TODO!
 [Link to example](https://github.com/Letero/Small-tasks/tree/master/Allocation)
+
+## 8. Include guard
+
+[Link](https://en.wikipedia.org/wiki/Include_guard)
+
+
+# Interesting facts
+
+## 1. Keyword "import"
+
+[Link](https://stackoverflow.com/questions/39280248/what-is-the-difference-between-import-and-include-in-c)
+
+## 2. Odd array indexing
+
+[Link](https://stackoverflow.com/questions/381542/with-arrays-why-is-it-the-case-that-a5-5a)
+
