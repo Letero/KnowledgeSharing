@@ -276,7 +276,11 @@ int main(void)
 }
 ```
 What is going on? 
+
 0xE+3 is misinterpreted as scientific notation.
-0xE + 3 is interpreted as it should be, output is 17. Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
+
+0xE + 3 is interpreted as it should be, output is 17. 
+
+Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
 
 
