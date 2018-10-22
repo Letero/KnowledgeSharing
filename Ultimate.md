@@ -215,7 +215,7 @@ TODO!
 
 [Link](https://www.geeksforgeeks.org/little-and-big-endian-mystery/)
 
-## 7. (IQN)Memory allocation for 2D and 3D array/vector
+## 7. (IQN)Memory allocation for 2D and 3D array
 
 TODO!
 [Link to example](https://github.com/Letero/Small-tasks/tree/master/Allocation)
@@ -258,4 +258,25 @@ Success	#stdin #stdout 0s 9424KB
 
 Why does it work this way?
 [Link to the answer](https://stackoverflow.com/questions/381542/with-arrays-why-is-it-the-case-that-a5-5a)
+
+## 3. Token whitespace
+
+```c
+#include <stdio.h>
+
+int main(void) 
+{
+	printf("%d\n", 0xE);	// Output: 14
+
+	printf("%E\n", 0xE+3);	//Output: error invalid suffix "+3" on integer constant
+	
+	printf("%d\n", 0xE + 3);	// Output: 17
+	
+	return 0;
+}
+```
+What is going on? 
+0xE+3 is misinterpreted as scientific notation.
+0xE + 3 is interpreted as it should be, output is 17. Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
+
 
