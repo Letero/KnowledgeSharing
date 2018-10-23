@@ -1,3 +1,36 @@
+- [Preparation](#preparation)
+- [C](#c)
+  * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
+  * [2. IQN Does *const volatile* make any sense?](#2-iqn-does--const-volatile--make-any-sense-)
+  * [3. IQN Void* pointer in C](#3-iqn-void--pointer-in-c)
+  * [4. IQN Register keyword](#4-iqn-register-keyword)
+- [CPP](#cpp)
+  * [1. Copy elision](#1-copy-elision)
+  * [2. Virtual Destructor](#2-virtual-destructor)
+  * [3. IQN When will copy constructor be called?](#3-iqn-when-will-copy-constructor-be-called-)
+  * [4. IQN When will deconstructor be called?](#4-iqn-when-will-deconstructor-be-called-)
+  * [5. IQN Differences: free vs delete](#5-iqn-differences--free-vs-delete)
+  * [6. IQN Differences: malloc vs new](#6-iqn-differences--malloc-vs-new)
+  * [7. IQN Differences: Free store and heap.](#7-iqn-differences--free-store-and-heap)
+  * [8. IQN Singleton](#8-iqn-singleton)
+  * [9. Restrict keyword - what is it used for?](#9-restrict-keyword---what-is-it-used-for-)
+- [Base knowledge](#base-knowledge)
+  * [1. IQN Memory layout of C/CPP programs](#1-iqn-memory-layout-of-c-cpp-programs)
+  * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
+  * [3. Preprocessor directives](#3-preprocessor-directives)
+  * [4. IQN Translation unit](#4-iqn-translation-unit)
+  * [5. IQN Binary operations](#5-iqn-binary-operations)
+  * [6. Endianness](#6-endianness)
+  * [7. IQN Memory allocation for 2D and 3D array](#7-iqn-memory-allocation-for-2d-and-3d-array)
+  * [8. Include guard](#8-include-guard)
+- [Interesting facts](#interesting-facts)
+  * [1. Keyword "import"](#1-keyword--import-)
+  * [2. Odd array indexing](#2-odd-array-indexing)
+  * [3. Token whitespace](#3-token-whitespace)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 # Preparation
 
@@ -16,7 +49,7 @@ Keep in mind that we are talking about **unitialized** variables!
 Checkout out [Memory layout](#1-memory-layout-of-c-programs--iqn), you will be able to understand why it works this way.
 
 Each variable in C must have:
- *  	Name
+ *  Name
  *	Type
  *	Value
  
@@ -57,19 +90,14 @@ Usually we use *const* specifier to make sure that variable's value won't be cha
 
 Value of *const volatile* variable might be changed during execution of program, what might make you think that using it doesn't make any sense. In this case we use *const* mainly to prevent programmer from doing unacknowledged mistake, rather than to make sure value won't be changed at all.
 
-## 3. Restrict keyword - what is it used for?
-
-Restrict keyword is used in pointer declaration. It tells that this pointer is the only way to access object that it's pointing to.
-It does not add new functionality
-Compiler won't prevent programmer from creating another pointer to restricted address. It is promise made by programmer.
-Not following to restrict contract results in undefined behavior.
-Restrict keyword is used so compiler can make optimizations.
-It was defined in C99 standard
-
-## 4. IQN Void* pointer in C
+## 3. IQN Void* pointer in C
 
 TODO!
 [Link for now](https://bytes.com/topic/c/answers/872557-what-use-void-pointer)
+
+## 4. IQN Register keyword
+
+[Link](https://stackoverflow.com/a/578213)
 
 # CPP
 
@@ -165,6 +193,15 @@ I will write summary here later on.
 
 TODO!
 [Link for now!](https://stackoverflow.com/questions/1008019/c-singleton-design-pattern)
+
+## 9. Restrict keyword - what is it used for?
+
+Restrict keyword is used in pointer declaration. It tells that this pointer is the only way to access object that it's pointing to.
+It does not add new functionality
+Compiler won't prevent programmer from creating another pointer to restricted address. It is promise made by programmer.
+Not following to restrict contract results in undefined behavior.
+Restrict keyword is used so compiler can make optimizations.
+It was defined in C99 standard
 
 # Base knowledge
 
