@@ -11,6 +11,7 @@
   * [4. (IQN)When will deconstructor be called?](#4--iqn-when-will-deconstructor-be-called-)
   * [5. (IQN)Differences: free vs delete](#5--iqn-differences--free-vs-delete)
   * [6. (IQN)Differences: malloc vs new](#6--iqn-differences--malloc-vs-new)
+  * [7. (IQN) Differences: Free store and heap.](#7--iqn--differences--free-store-and-heap)
 - [Base knowledge](#base-knowledge)
   * [1. (IQN)Memory layout of C/CPP programs](#1--iqn-memory-layout-of-c-cpp-programs)
   * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
@@ -18,10 +19,14 @@
   * [4. (IQN)Translation unit](#4--iqn-translation-unit)
   * [5. (IQN)Binary operations](#5--iqn-binary-operations)
   * [6. Endianness](#6-endianness)
-  * [7. (IQN)Memory allocation for 2D and 3D array/vector](#7--iqn-memory-allocation-for-2d-and-3d-array-vector)
+  * [7. (IQN)Memory allocation for 2D and 3D array](#7--iqn-memory-allocation-for-2d-and-3d-array)
+  * [8. Include guard](#8-include-guard)
+- [Interesting facts](#interesting-facts)
+  * [1. Keyword "import"](#1-keyword--import-)
+  * [2. Odd array indexing](#2-odd-array-indexing)
+  * [3. Token whitespace](#3-token-whitespace)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 
 
@@ -181,6 +186,12 @@ TODO!
 
 TODO!
 [Link for now](https://www.geeksforgeeks.org/malloc-vs-new/)
+
+## 7. (IQN) Differences: Free store and heap.
+
+Well, [this should be complete answer](https://stackoverflow.com/questions/1350819/c-free-store-vs-heap).
+
+I will write summary here later on.
 
 # Base knowledge
 
