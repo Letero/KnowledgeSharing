@@ -1,35 +1,3 @@
-- [Preparation](#preparation)
-- [C](#c)
-  * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
-  * [2. (IQN)Does *const volatile* make any sense?](#2--iqn-does--const-volatile--make-any-sense-)
-  * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
-  * [4. (IQN)Void* pointer in C](#4--iqn-void--pointer-in-c)
-- [CPP](#cpp)
-  * [1. Copy elision](#1-copy-elision)
-  * [2. Virtual Destructor](#2-virtual-destructor)
-  * [3. (IQN)When will copy constructor be called?](#3--iqn-when-will-copy-constructor-be-called-)
-  * [4. (IQN)When will deconstructor be called?](#4--iqn-when-will-deconstructor-be-called-)
-  * [5. (IQN)Differences: free vs delete](#5--iqn-differences--free-vs-delete)
-  * [6. (IQN)Differences: malloc vs new](#6--iqn-differences--malloc-vs-new)
-  * [7. (IQN) Differences: Free store and heap.](#7--iqn--differences--free-store-and-heap)
-- [Base knowledge](#base-knowledge)
-  * [1. (IQN)Memory layout of C/CPP programs](#1--iqn-memory-layout-of-c-cpp-programs)
-  * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
-  * [3. Preprocessor directives](#3-preprocessor-directives)
-  * [4. (IQN)Translation unit](#4--iqn-translation-unit)
-  * [5. (IQN)Binary operations](#5--iqn-binary-operations)
-  * [6. Endianness](#6-endianness)
-  * [7. (IQN)Memory allocation for 2D and 3D array](#7--iqn-memory-allocation-for-2d-and-3d-array)
-  * [8. Include guard](#8-include-guard)
-- [Interesting facts](#interesting-facts)
-  * [1. Keyword "import"](#1-keyword--import-)
-  * [2. Odd array indexing](#2-odd-array-indexing)
-  * [3. Token whitespace](#3-token-whitespace)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
-
 
 # Preparation
 
@@ -48,7 +16,7 @@ Keep in mind that we are talking about **unitialized** variables!
 Checkout out [Memory layout](#1-memory-layout-of-c-programs--iqn), you will be able to understand why it works this way.
 
 Each variable in C must have:
- *  Name
+ *  	Name
  *	Type
  *	Value
  
@@ -79,7 +47,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
-## 2. (IQN)Does *const volatile* make any sense?
+## 2. IQN Does *const volatile* make any sense?
 
 That is kind of tricky question.
 
@@ -98,7 +66,7 @@ Not following to restrict contract results in undefined behavior.
 Restrict keyword is used so compiler can make optimizations.
 It was defined in C99 standard
 
-## 4. (IQN)Void* pointer in C
+## 4. IQN Void* pointer in C
 
 TODO!
 [Link for now](https://bytes.com/topic/c/answers/872557-what-use-void-pointer)
@@ -165,37 +133,42 @@ If class has even one virtual method, then it should have virtual destructor.
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
 
-## 3. (IQN)When will copy constructor be called?
+## 3. IQN When will copy constructor be called?
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/21206359/in-which-situations-is-the-c-copy-constructor-called)
 
-## 4. (IQN)When will deconstructor be called? 
+## 4. IQN When will deconstructor be called? 
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
 
-## 5. (IQN)Differences: free vs delete
+## 5. IQN Differences: free vs delete
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/328834/c-delete-vs-free-and-performance)
 
 
-## 6. (IQN)Differences: malloc vs new
+## 6. IQN Differences: malloc vs new
 
 TODO!
 [Link for now](https://www.geeksforgeeks.org/malloc-vs-new/)
 
-## 7. (IQN) Differences: Free store and heap.
+## 7. IQN Differences: Free store and heap.
 
 Well, [this should be complete answer](https://stackoverflow.com/questions/1350819/c-free-store-vs-heap).
 
 I will write summary here later on.
 
+## 8. IQN Singleton
+
+TODO!
+[Link for now!](https://stackoverflow.com/questions/1008019/c-singleton-design-pattern)
+
 # Base knowledge
 
-## 1. (IQN)Memory layout of C/CPP programs
+## 1. IQN Memory layout of C/CPP programs
 
 For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
@@ -212,12 +185,12 @@ TODO!
 TODO!
 [Link for now](http://www.cplusplus.com/doc/tutorial/preprocessor/)
 
-## 4. (IQN)Translation unit
+## 4. IQN Translation unit
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/8342185/translation-unit-in-c-and-c)
 
-## 5. (IQN)Binary operations
+## 5. IQN Binary operations
 
 TODO!
 [Link for now](https://github.com/Letero/Small-tasks/blob/master/BitwiseOperations/BitwiseOperations.c)
@@ -226,7 +199,7 @@ TODO!
 
 [Link](https://www.geeksforgeeks.org/little-and-big-endian-mystery/)
 
-## 7. (IQN)Memory allocation for 2D and 3D array
+## 7. IQN Memory allocation for 2D and 3D array
 
 TODO!
 [Link to example](https://github.com/Letero/Small-tasks/tree/master/Allocation)
