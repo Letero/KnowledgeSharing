@@ -245,6 +245,11 @@ TODO!
 
 [Link](https://en.wikipedia.org/wiki/Include_guard)
 
+## 9. Structural padding and packing
+
+TODO!
+[Link for now](https://www.youtube.com/watch?v=QSuBwGmFQqA)
+
 
 # Interesting facts
 
