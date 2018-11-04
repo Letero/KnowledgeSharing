@@ -203,6 +203,18 @@ Not following to restrict contract results in undefined behavior.
 Restrict keyword is used so compiler can make optimizations.
 It was defined in C99 standard
 
+## 10. What areas are not statically (compile-time) type safe?
+
+Ideally, a program would be completely statically (compile-time) type safe. Unfortunately, that is not possible. Problem areas:
+
+* unions
+* casts
+* array decay
+* range errors
+* narrowing conversions
+
+These areas are sources of serious problems (e.g., crashes and security violations)
+
 # Base knowledge
 
 ## 1. IQN Memory layout of C/CPP programs
