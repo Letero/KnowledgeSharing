@@ -99,6 +99,19 @@ TODO!
 
 [Link](https://stackoverflow.com/a/578213)
 
+## 5. Auto in C?
+
+What is keyword auto for?
+**auto** is modifier like for e.g. **static**. 
+By default every local variable of the function is automatic (auto). In the below function both the variables ‘i’ and ‘j’ are automatic variables.
+```c
+void f() {
+   int i;
+   auto int j;
+}
+```
+*auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
+
 # CPP
 
 ## 1. Copy elision
@@ -262,18 +275,21 @@ TODO!
 TODO!
 [Link for now](https://www.youtube.com/watch?v=QSuBwGmFQqA)
 
-## 10. Auto in C?
+## 10. Dangling pointer
 
-What is keyword auto for?
-**auto** is modifier like for e.g. **static**. 
-By default every local variable of the function is automatic (auto). In the below function both the variables ‘i’ and ‘j’ are automatic variables.
-```c
-void f() {
-   int i;
-   auto int j;
-}
-```
-*auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
+In short it is a pointer pointing to non-existing memory location.
+
+Dangling pointers arise when an object is deleted or de-allocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the de-allocated memory. 
+
+It creates the problem because the pointer is still pointing the memory that is not available. When the user tries to dereference the daggling pointers than it shows the undefined behavior and can be the cause of the segmentation fault.
+
+## 11. Wild pointer
+
+A pointer that is not initialized properly prior to its first use is known as the wild pointer. Uninitialized pointers behavior is totally undefined because it may point some arbitrary location that can be the cause of the program crash, that’s is the reason it is called a wild pointer.
+
+In the other word, we can say every pointer in programming languages that are not initialized either by the compiler or programmer begins as a wild pointer.
+
+Good practice is to initialize new pointer with **NULL** if you don't want to assign some other value to it at the moment of declaration.
 
 # Interesting facts
 
