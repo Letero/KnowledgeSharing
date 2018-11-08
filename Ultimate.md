@@ -4,6 +4,8 @@
   * [2. IQN Does *const volatile* make any sense?](#2-iqn-does--const-volatile--make-any-sense-)
   * [3. IQN Void* pointer in C](#3-iqn-void--pointer-in-c)
   * [4. IQN Register keyword](#4-iqn-register-keyword)
+  * [5. Auto in C?](#5-auto-in-c-)
+  * [16. Token](#16-token)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
   * [2. Virtual Destructor](#2-virtual-destructor)
@@ -14,6 +16,7 @@
   * [7. IQN Differences: Free store and heap.](#7-iqn-differences--free-store-and-heap)
   * [8. IQN Singleton](#8-iqn-singleton)
   * [9. Restrict keyword - what is it used for?](#9-restrict-keyword---what-is-it-used-for-)
+  * [10. What areas are not statically (compile-time) type safe?](#10-what-areas-are-not-statically--compile-time--type-safe-)
 - [Base knowledge](#base-knowledge)
   * [1. IQN Memory layout of C/CPP programs](#1-iqn-memory-layout-of-c-cpp-programs)
   * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
@@ -23,6 +26,9 @@
   * [6. Endianness](#6-endianness)
   * [7. IQN Memory allocation for 2D and 3D array](#7-iqn-memory-allocation-for-2d-and-3d-array)
   * [8. Include guard](#8-include-guard)
+  * [9. Structural padding and packing](#9-structural-padding-and-packing)
+  * [10. Dangling pointer](#10-dangling-pointer)
+  * [11. Wild pointer](#11-wild-pointer)
 - [Interesting facts](#interesting-facts)
   * [1. Keyword "import"](#1-keyword--import-)
   * [2. Odd array indexing](#2-odd-array-indexing)
@@ -111,6 +117,12 @@ void f() {
 }
 ```
 *auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
+
+## 16. Token
+
+A C program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol.
+
+Even space can be token - checkout [3. Token whitespace](#3-token-whitespace) to see interesting example.
 
 # CPP
 
