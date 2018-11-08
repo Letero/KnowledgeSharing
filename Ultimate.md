@@ -262,6 +262,18 @@ TODO!
 TODO!
 [Link for now](https://www.youtube.com/watch?v=QSuBwGmFQqA)
 
+## 10. Auto in C?
+
+What is keyword auto for?
+**auto** is modifier like for e.g. **static**. 
+By default every local variable of the function is automatic (auto). In the below function both the variables ‘i’ and ‘j’ are automatic variables.
+```c
+void f() {
+   int i;
+   auto int j;
+}
+```
+*auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
 
 # Interesting facts
 
