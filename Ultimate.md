@@ -118,11 +118,19 @@ void f() {
 ```
 *auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
 
-## 16. Token
+## 6. Token
 
 A C program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol.
 
 Even space can be token - checkout [3. Token whitespace](#3-token-whitespace) to see interesting example.
+
+## 7. When the 'address of' operator (&) cannot be used?
+
+It cannot be used on constants.
+
+It cannot be used on variable which are declared using register storage class.
+[TODO!]() 
+Example!
 
 # CPP
 
@@ -361,4 +369,5 @@ What is going on?
 
 Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
 
+It is one of very few examples when whitepsace becomes token 
 
