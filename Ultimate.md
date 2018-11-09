@@ -5,7 +5,8 @@
   * [3. IQN Void* pointer in C](#3-iqn-void--pointer-in-c)
   * [4. IQN Register keyword](#4-iqn-register-keyword)
   * [5. Auto in C?](#5-auto-in-c-)
-  * [16. Token](#16-token)
+  * [6. Token](#6-token)
+  * [7. When the 'address of' operator (&) cannot be used?](#7-when-the--address-of--operator-----cannot-be-used-)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
   * [2. Virtual Destructor](#2-virtual-destructor)
@@ -35,6 +36,7 @@
   * [3. Token whitespace](#3-token-whitespace)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -374,5 +376,5 @@ What is going on?
 
 Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
 
-It is one of very few examples when whitepsace becomes token 
+It is one of very few examples when whitespace becomes token 
 
