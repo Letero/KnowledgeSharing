@@ -218,9 +218,14 @@ TODO!
 
 ## 7. IQN Differences: Free store and heap.
 
-Well, [this should be complete answer](https://stackoverflow.com/questions/1350819/c-free-store-vs-heap).
+Difference is purely conceptual. Those two are different names for same area in memory.
 
-I will write summary here later on.
+*malloc*, *calloc*... and *free* use **heap**.
+
+*new* and *delete* use **stack**. 
+
+ It *could* be compiler specific and those two *could* designate a different memory spaces, but I don't think that you will ever see something like that. 
+
 
 ## 8. IQN Singleton
 
