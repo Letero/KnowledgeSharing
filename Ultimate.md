@@ -128,11 +128,27 @@ Even space can be token - checkout [3. Token whitespace](#3-token-whitespace) to
 
 ## 7. When the 'address of' operator (&) cannot be used?
 
-It cannot be used on constants.
-
 It cannot be used on variable which are declared using register storage class.
-[TODO!]() 
-Example!
+
+```c
+#include <stdio.h>
+
+int main(void) 
+{
+  register int someValue = 6;
+  printf("%p", &someValue);
+  return 0;
+}
+```
+Ouput:
+```c
+prog.c: In function ‘main’:
+prog.c:9:2: error: address of register variable ‘someValue’ requested
+  printf("%p", &someValue);
+```
+
+It is doable in C++ tho.
+
 
 # CPP
 
