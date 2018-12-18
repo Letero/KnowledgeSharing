@@ -30,10 +30,12 @@
   * [9. Structural padding and packing](#9-structural-padding-and-packing)
   * [10. Dangling pointer](#10-dangling-pointer)
   * [11. Wild pointer](#11-wild-pointer)
+  * [12. Serialisation and deserialisation](#12-serialisation-and-deserialisation)
 - [Interesting facts](#interesting-facts)
   * [1. Keyword "import"](#1-keyword--import-)
   * [2. Odd array indexing](#2-odd-array-indexing)
   * [3. Token whitespace](#3-token-whitespace)
+  * [4. Comma operator](#4-comma-operator)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -438,6 +440,7 @@ Assigning variable j
 555
 ```
 
+You can use this operator pretty much everywhere.
 ```c
 for (int i = 0; i < 101; ++i, functionCall())	// iterate and call function
 {
