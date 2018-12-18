@@ -414,6 +414,12 @@ printf("%d", j);	//prints 6
 - *Why?*
 Each statement is evaluated, but the value of the expression will be that of the last statement evaluated.
 
+Similar, a little bit more complicated example:
+```c
+int j = (6,6,6) + (4,4,4) + (3,3,3,3,3);
+printf("%d", j); // 6+4+3 = 13. Each bracket statement is 
+```
+
 Let's go further.
 ```c
 #include <stdio.h>
@@ -431,3 +437,11 @@ Success	#stdin #stdout 0s 9424KB
 Assigning variable j
 555
 ```
+
+```c
+for (int i = 0; i < 101; ++i, functionCall())	// iterate and call function
+{
+	// do something else
+}
+```
+
