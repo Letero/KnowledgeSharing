@@ -1,26 +1,35 @@
 - [Preparation](#preparation)
 - [C](#c)
   * [1. Difference between initial values of unitialized static and non-static variables](#1-difference-between-initial-values-of-unitialized-static-and-non-static-variables)
-  * [2. (IQN)Does *const volatile* make any sense?](#2--iqn-does--const-volatile--make-any-sense-)
-  * [3. Restrict keyword - what is it used for?](#3-restrict-keyword---what-is-it-used-for-)
-  * [4. (IQN)Void* pointer in C](#4--iqn-void--pointer-in-c)
+  * [2. IQN Does *const volatile* make any sense?](#2-iqn-does--const-volatile--make-any-sense-)
+  * [3. IQN Void* pointer in C](#3-iqn-void--pointer-in-c)
+  * [4. IQN Register keyword](#4-iqn-register-keyword)
+  * [5. Auto in C?](#5-auto-in-c-)
+  * [6. Token](#6-token)
+  * [7. When the 'address of' operator (&) cannot be used?](#7-when-the--address-of--operator-----cannot-be-used-)
 - [CPP](#cpp)
   * [1. Copy elision](#1-copy-elision)
   * [2. Virtual Destructor](#2-virtual-destructor)
-  * [3. (IQN)When will copy constructor be called?](#3--iqn-when-will-copy-constructor-be-called-)
-  * [4. (IQN)When will deconstructor be called?](#4--iqn-when-will-deconstructor-be-called-)
-  * [5. (IQN)Differences: free vs delete](#5--iqn-differences--free-vs-delete)
-  * [6. (IQN)Differences: malloc vs new](#6--iqn-differences--malloc-vs-new)
-  * [7. (IQN) Differences: Free store and heap.](#7--iqn--differences--free-store-and-heap)
+  * [3. IQN When will copy constructor be called?](#3-iqn-when-will-copy-constructor-be-called-)
+  * [4. IQN When will deconstructor be called?](#4-iqn-when-will-deconstructor-be-called-)
+  * [5. IQN Differences: free vs delete](#5-iqn-differences--free-vs-delete)
+  * [6. IQN Differences: malloc vs new](#6-iqn-differences--malloc-vs-new)
+  * [7. IQN Differences: Free store and heap.](#7-iqn-differences--free-store-and-heap)
+  * [8. IQN Singleton](#8-iqn-singleton)
+  * [9. Restrict keyword - what is it used for?](#9-restrict-keyword---what-is-it-used-for-)
+  * [10. What areas are not statically (compile-time) type safe?](#10-what-areas-are-not-statically--compile-time--type-safe-)
 - [Base knowledge](#base-knowledge)
-  * [1. (IQN)Memory layout of C/CPP programs](#1--iqn-memory-layout-of-c-cpp-programs)
+  * [1. IQN Memory layout of C/CPP programs](#1-iqn-memory-layout-of-c-cpp-programs)
   * [2. Compilation process C/CPP](#2-compilation-process-c-cpp)
   * [3. Preprocessor directives](#3-preprocessor-directives)
-  * [4. (IQN)Translation unit](#4--iqn-translation-unit)
-  * [5. (IQN)Binary operations](#5--iqn-binary-operations)
+  * [4. IQN Translation unit](#4-iqn-translation-unit)
+  * [5. IQN Binary operations](#5-iqn-binary-operations)
   * [6. Endianness](#6-endianness)
-  * [7. (IQN)Memory allocation for 2D and 3D array](#7--iqn-memory-allocation-for-2d-and-3d-array)
+  * [7. IQN Memory allocation for 2D and 3D array](#7-iqn-memory-allocation-for-2d-and-3d-array)
   * [8. Include guard](#8-include-guard)
+  * [9. Structural padding and packing](#9-structural-padding-and-packing)
+  * [10. Dangling pointer](#10-dangling-pointer)
+  * [11. Wild pointer](#11-wild-pointer)
 - [Interesting facts](#interesting-facts)
   * [1. Keyword "import"](#1-keyword--import-)
   * [2. Odd array indexing](#2-odd-array-indexing)
@@ -79,7 +88,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 ```
-## 2. (IQN)Does *const volatile* make any sense?
+## 2. IQN Does *const volatile* make any sense?
 
 That is kind of tricky question.
 
@@ -89,19 +98,57 @@ Usually we use *const* specifier to make sure that variable's value won't be cha
 
 Value of *const volatile* variable might be changed during execution of program, what might make you think that using it doesn't make any sense. In this case we use *const* mainly to prevent programmer from doing unacknowledged mistake, rather than to make sure value won't be changed at all.
 
-## 3. Restrict keyword - what is it used for?
-
-Restrict keyword is used in pointer declaration. It tells that this pointer is the only way to access object that it's pointing to.
-It does not add new functionality
-Compiler won't prevent programmer from creating another pointer to restricted address. It is promise made by programmer.
-Not following to restrict contract results in undefined behavior.
-Restrict keyword is used so compiler can make optimizations.
-It was defined in C99 standard
-
-## 4. (IQN)Void* pointer in C
+## 3. IQN Void* pointer in C
 
 TODO!
 [Link for now](https://bytes.com/topic/c/answers/872557-what-use-void-pointer)
+
+## 4. IQN Register keyword
+
+[Link](https://stackoverflow.com/a/578213)
+
+## 5. Auto in C?
+
+What is keyword auto for?
+**auto** is modifier like for e.g. **static**. 
+By default every local variable of the function is automatic (auto). In the below function both the variables ‘i’ and ‘j’ are automatic variables.
+```c
+void f() {
+   int i;
+   auto int j;
+}
+```
+*auto* is archaic, it exists in C because before the C language there was a **B language** in which that keyword was necessary for declaring local variables. (B was developed into NB, which became C).
+
+## 6. Token
+
+A C program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol.
+
+Even space can be token - checkout [3. Token whitespace](#3-token-whitespace) to see interesting example.
+
+## 7. When the 'address of' operator (&) cannot be used?
+
+It cannot be used on variable which are declared using register storage class.
+
+```c
+#include <stdio.h>
+
+int main(void) 
+{
+  register int someValue = 6;
+  printf("%p", &someValue);
+  return 0;
+}
+```
+Ouput:
+```c
+prog.c: In function ‘main’:
+prog.c:9:2: error: address of register variable ‘someValue’ requested
+  printf("%p", &someValue);
+```
+
+It is doable in C++ tho.
+
 
 # CPP
 
@@ -165,37 +212,68 @@ If class has even one virtual method, then it should have virtual destructor.
 ![Example ](https://github.com/Letero/KnowledgeSharing/blob/master/Images/VirtualDestructor.png)
 
 
-## 3. (IQN)When will copy constructor be called?
+## 3. IQN When will copy constructor be called?
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/21206359/in-which-situations-is-the-c-copy-constructor-called)
 
-## 4. (IQN)When will deconstructor be called? 
+## 4. IQN When will deconstructor be called? 
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/10081429/when-is-a-c-destructor-called)
 
 
-## 5. (IQN)Differences: free vs delete
+## 5. IQN Differences: free vs delete
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/328834/c-delete-vs-free-and-performance)
 
 
-## 6. (IQN)Differences: malloc vs new
+## 6. IQN Differences: malloc vs new
 
 TODO!
 [Link for now](https://www.geeksforgeeks.org/malloc-vs-new/)
 
-## 7. (IQN) Differences: Free store and heap.
+## 7. IQN Differences: Free store and heap.
 
-Well, [this should be complete answer](https://stackoverflow.com/questions/1350819/c-free-store-vs-heap).
+Difference is purely conceptual. Those two are different names for same area in memory.
 
-I will write summary here later on.
+*malloc*, *calloc*... and *free* use **heap**.
+
+*new* and *delete* use **stack**. 
+
+ It *could* be compiler specific and those two *could* designate a different memory spaces, but I don't think that you will ever see something like that. 
+
+
+## 8. IQN Singleton
+
+TODO!
+[Link for now!](https://stackoverflow.com/questions/1008019/c-singleton-design-pattern)
+
+## 9. Restrict keyword - what is it used for?
+
+Restrict keyword is used in pointer declaration. It tells that this pointer is the only way to access object that it's pointing to.
+It does not add new functionality
+Compiler won't prevent programmer from creating another pointer to restricted address. It is promise made by programmer.
+Not following to restrict contract results in undefined behavior.
+Restrict keyword is used so compiler can make optimizations.
+It was defined in C99 standard
+
+## 10. What areas are not statically (compile-time) type safe?
+
+Ideally, a program would be completely statically (compile-time) type safe. Unfortunately, that is not possible. Problem areas:
+
+* unions
+* casts
+* array decay
+* range errors
+* narrowing conversions
+
+These areas are sources of serious problems (e.g., crashes and security violations)
 
 # Base knowledge
 
-## 1. (IQN)Memory layout of C/CPP programs
+## 1. IQN Memory layout of C/CPP programs
 
 For now use this source, decent explanation
 [Link](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
@@ -212,12 +290,12 @@ TODO!
 TODO!
 [Link for now](http://www.cplusplus.com/doc/tutorial/preprocessor/)
 
-## 4. (IQN)Translation unit
+## 4. IQN Translation unit
 
 TODO!
 [Link for now](https://stackoverflow.com/questions/8342185/translation-unit-in-c-and-c)
 
-## 5. (IQN)Binary operations
+## 5. IQN Binary operations
 
 TODO!
 [Link for now](https://github.com/Letero/Small-tasks/blob/master/BitwiseOperations/BitwiseOperations.c)
@@ -226,7 +304,7 @@ TODO!
 
 [Link](https://www.geeksforgeeks.org/little-and-big-endian-mystery/)
 
-## 7. (IQN)Memory allocation for 2D and 3D array
+## 7. IQN Memory allocation for 2D and 3D array
 
 TODO!
 [Link to example](https://github.com/Letero/Small-tasks/tree/master/Allocation)
@@ -235,6 +313,26 @@ TODO!
 
 [Link](https://en.wikipedia.org/wiki/Include_guard)
 
+## 9. Structural padding and packing
+
+TODO!
+[Link for now](https://www.youtube.com/watch?v=QSuBwGmFQqA)
+
+## 10. Dangling pointer
+
+In short it is a pointer pointing to non-existing memory location.
+
+Dangling pointers arise when an object is deleted or de-allocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the de-allocated memory. 
+
+It creates the problem because the pointer is still pointing the memory that is not available. When the user tries to dereference the daggling pointers than it shows the undefined behavior and can be the cause of the segmentation fault.
+
+## 11. Wild pointer
+
+A pointer that is not initialized properly prior to its first use is known as the wild pointer. Uninitialized pointers behavior is totally undefined because it may point some arbitrary location that can be the cause of the program crash, that’s is the reason it is called a wild pointer.
+
+In the other word, we can say every pointer in programming languages that are not initialized either by the compiler or programmer begins as a wild pointer.
+
+Good practice is to initialize new pointer with **NULL** if you don't want to assign some other value to it at the moment of declaration.
 
 # Interesting facts
 
@@ -294,4 +392,5 @@ What is going on?
 
 Compiler sees every number the same way, hexadecimal representation is only user-friendly feature. Hence 14 + 3;
 
+It is one of very few examples when whitespace becomes token 
 
