@@ -334,6 +334,14 @@ In the other word, we can say every pointer in programming languages that are no
 
 Good practice is to initialize new pointer with **NULL** if you don't want to assign some other value to it at the moment of declaration.
 
+## 12. Serialisation and deserialisation
+
+**Serialisation** (or serialization) is the process of translating data structures or object state into a format that can be stored (for example, in a file or memory buffer) or transmitted (for example, across a network connection link) and reconstructed later (possibly in a different computer environment). When the resulting series of bits is reread according to the serialization format, it can be used to create a semantically identical clone of the original object
+
+**Deserialization** is the opposite operation, extracting a data structure from a series of bytes
+
+![Example](https://github.com/Letero/KnowledgeSharing/blob/master/Images/serialisation.jpeg)
+
 # Interesting facts
 
 ## 1. Keyword "import"
