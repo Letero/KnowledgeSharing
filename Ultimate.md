@@ -402,3 +402,32 @@ Compiler sees every number the same way, hexadecimal representation is only user
 
 It is one of very few examples when whitespace becomes token 
 
+## 4. Comma operator
+
+This is useful, but not widely used operator. It can also be tricky.
+
+Few examples:
+```c
+int j = 6, 6, 6;
+printf("%d", j);	//prints 6
+```
+- *Why?*
+Each statement is evaluated, but the value of the expression will be that of the last statement evaluated.
+
+Let's go further.
+```c
+#include <stdio.h>
+
+int main(void) 
+{
+	int j = (printf("Assigning variable j\n"), 555);
+	printf("%d\n", j);
+	return 0;
+}
+```
+Output:
+```c
+Success	#stdin #stdout 0s 9424KB
+Assigning variable j
+555
+```
