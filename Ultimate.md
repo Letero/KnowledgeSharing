@@ -448,7 +448,7 @@ for (int i = 0; i < 101; ++i, functionCall())	// iterate and call function
 }
 ```
 
-## 5. %n in printf()
+## 5. Printf() and %n 
 
 Example:
 ```c
