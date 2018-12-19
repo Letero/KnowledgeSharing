@@ -448,3 +448,36 @@ for (int i = 0; i < 101; ++i, functionCall())	// iterate and call function
 }
 ```
 
+## 5. %n in printf()
+
+Example:
+```c
+int a = 0;
+printf("Something%n", &a);	
+printf("\n %d");
+```
+Output:
+```c
+Something
+ 9
+```
+%n counts all characters preceding it and saves this value under given address (&a in our case). Below useful use case.
+
+Input:
+```c
+Welcome!
+```
+```c
+int main(void) 
+{
+	char str[100];
+	int length;
+	scanf("%s%n", &str, &length);
+	printf("Length = %d", length);
+	return 0;
+}
+```
+Output:
+```c
+Length = 8
+```
