@@ -454,7 +454,7 @@ Example:
 ```c
 int a = 0;
 printf("Something%n", &a);	
-printf("\n %d");
+printf("\n %d", a);
 ```
 Output:
 ```c
